@@ -2,6 +2,7 @@ package com.lite.ms_factura.application.service;
 
 import org.springframework.stereotype.Service;
 
+import com.lite.ms_factura.application.exception.ResourceNotFoundException;
 import com.lite.ms_factura.domain.model.Factura;
 
 import lombok.RequiredArgsConstructor;
@@ -32,15 +33,18 @@ public class FacturaService implements FacturaUseCase {
     
     @Override
     public Factura updateFactura(Long id, Factura facturaDetails) {
-        Optional<Factura> facturaOpt = facturaRepository.findById(id);
-        
-        if (facturaOpt.isPresent()) {
-            Factura existingFactura = facturaOpt.get();
-            facturaDetails.setId(id);
-            return facturaRepository.save(facturaDetails);
-        } else {
-            throw new RuntimeException("Factura no encontrada con id: " + id);
-        }
+        facturaRepository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("Factura", "id", id));
+
+        Factura facturaToUpdate = new Factura(
+                id,
+                facturaDetails.numero(),
+                facturaDetails.fechaEmision(),
+                facturaDetails.total(),
+                facturaDetails.clienteId(),
+                facturaDetails.descripcion());
+
+        return facturaRepository.save(facturaToUpdate);
     }
     
     @Override

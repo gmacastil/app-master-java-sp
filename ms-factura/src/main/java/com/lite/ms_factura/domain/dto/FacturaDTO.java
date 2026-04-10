@@ -8,6 +8,8 @@ import jakarta.validation.constraints.Positive;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
+import com.lite.ms_factura.application.validators.Celular;
+
 
 public record FacturaDTO (
     Long id,
@@ -20,6 +22,8 @@ public record FacturaDTO (
     BigDecimal total,
     @NotNull(message = "El ID del cliente es obligatorio")
     Long clienteId,
-    String descripcion
+    String descripcion,
+    @Celular(message = "El número de celular debe tener 12 dígitos, empezar por 3 y contener solo números")
+    int celular
 ) {
 }

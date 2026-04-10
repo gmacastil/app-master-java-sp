@@ -1,0 +1,6 @@
+facturaId,facturaNumero,facturaFechaEmision,facturaTotal,facturaClienteId,facturaDescripcion,facturaNumeroMod,facturaTotalMod,facturaDescripcionMod,facturaNumeroVacio,facturaDescripcionNumeroVacio,facturaNumeroTotalNegativo,facturaTotalNegativo,facturaDescripcionTotalNegativo
+101,FACT-HP-001,2026-04-18,1500.00,10,Factura happy path 1,FACT-HP-001-MOD,1600.00,Factura happy path 1 actualizada,,No aplica,FACT-HP-NEG-001,-1.00,No aplica
+102,FACT-HP-002,2026-04-19,2500.75,11,Factura happy path 2,FACT-HP-002-MOD,2650.75,Factura happy path 2 actualizada,,No aplica,FACT-HP-NEG-002,-1.00,No aplica
+103,FACT-HP-003,2026-04-20,310.20,12,Factura happy path 3,FACT-HP-003-MOD,400.20,Factura happy path 3 actualizada,,No aplica,FACT-HP-NEG-003,-1.00,No aplica
+104,FACT-HP-004,2026-04-21,899.99,13,Factura happy path 4,FACT-HP-004-MOD,999.99,Factura happy path 4 actualizada,,No aplica,FACT-HP-NEG-004,-1.00,No aplica
+105,FACT-HP-005,2026-04-22,4200.00,14,Factura happy path 5,FACT-HP-005-MOD,4500.00,Factura happy path 5 actualizada,,No aplica,FACT-HP-NEG-005,-1.00,No aplica

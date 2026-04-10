@@ -1,0 +1,6 @@
+facturaId,facturaNumero,facturaFechaEmision,facturaTotal,facturaClienteId,facturaDescripcion,facturaNumeroMod,facturaTotalMod,facturaDescripcionMod,facturaNumeroVacio,facturaDescripcionNumeroVacio,facturaNumeroTotalNegativo,facturaTotalNegativo,facturaDescripcionTotalNegativo
+201,FACT-VAL-001,2026-04-18,1000.00,20,Base para validacion,FACT-VAL-001-MOD,1200.00,Base para validacion actualizada,,Validacion numero vacio caso 1,FACT-VAL-NEG-001,-100.00,Validacion total negativo caso 1
+202,FACT-VAL-002,2026-04-19,1100.00,21,Base para validacion 2,FACT-VAL-002-MOD,1300.00,Base para validacion 2 actualizada,,Validacion numero vacio caso 2,FACT-VAL-NEG-002,-0.01,Validacion total negativo caso 2
+203,FACT-VAL-003,2026-04-20,900.00,22,Base para validacion 3,FACT-VAL-003-MOD,950.00,Base para validacion 3 actualizada,,Validacion numero vacio caso 3,FACT-VAL-NEG-003,-500.00,Validacion total negativo caso 3
+204,FACT-VAL-004,2026-04-21,700.00,23,Base para validacion 4,FACT-VAL-004-MOD,800.00,Base para validacion 4 actualizada,,Validacion numero vacio caso 4,FACT-VAL-NEG-004,-999.99,Validacion total negativo caso 4
+205,FACT-VAL-005,2026-04-22,600.00,24,Base para validacion 5,FACT-VAL-005-MOD,650.00,Base para validacion 5 actualizada,,Validacion numero vacio caso 5,FACT-VAL-NEG-005,-10.00,Validacion total negativo caso 5

@@ -1,0 +1,6 @@
+facturaId,facturaNumero,facturaFechaEmision,facturaTotal,facturaClienteId,facturaDescripcion,facturaNumeroMod,facturaTotalMod,facturaDescripcionMod,facturaNumeroVacio,facturaDescripcionNumeroVacio,facturaNumeroTotalNegativo,facturaTotalNegativo,facturaDescripcionTotalNegativo
+301,FACT-MIX-001,2026-04-18,150.00,30,Caso mixto A,FACT-MIX-001-MOD,170.00,Caso mixto A actualizado,,Numero vacio mix A,FACT-MIX-NEG-001,-15.00,Total negativo mix A
+302,FACT-MIX-002,2026-04-19,275.50,31,Caso mixto B,FACT-MIX-002-MOD,300.50,Caso mixto B actualizado,,Numero vacio mix B,FACT-MIX-NEG-002,-27.55,Total negativo mix B
+303,FACT-MIX-003,2026-04-20,890.00,32,Caso mixto C,FACT-MIX-003-MOD,920.00,Caso mixto C actualizado,,Numero vacio mix C,FACT-MIX-NEG-003,-89.00,Total negativo mix C
+304,FACT-MIX-004,2026-04-21,1330.40,33,Caso mixto D,FACT-MIX-004-MOD,1400.40,Caso mixto D actualizado,,Numero vacio mix D,FACT-MIX-NEG-004,-133.04,Total negativo mix D
+305,FACT-MIX-005,2026-04-22,5600.00,34,Caso mixto E,FACT-MIX-005-MOD,6000.00,Caso mixto E actualizado,,Numero vacio mix E,FACT-MIX-NEG-005,-560.00,Total negativo mix E

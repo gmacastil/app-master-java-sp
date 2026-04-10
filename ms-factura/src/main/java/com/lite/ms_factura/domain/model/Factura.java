@@ -12,10 +12,4 @@ public record Factura(
     BigDecimal total,
     Long clienteId,
     String descripcion
-) {
-
-    public void setId(Long id2) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'setId'");
-    }
-}
+) {}

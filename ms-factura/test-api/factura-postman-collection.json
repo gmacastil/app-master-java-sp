@@ -24,7 +24,7 @@
         ],
         "body": {
           "mode": "raw",
-          "raw": "{\n  \"numero\": \"FACT-2026-001\",\n  \"fechaEmision\": \"2026-04-08\",\n  \"total\": 1500.50,\n  \"clienteId\": 1,\n  \"descripcion\": \"Factura por servicios de consultoría\"\n}"
+          "raw": "{\n  \"numero\": \"{{facturaNumero}}\",\n  \"fechaEmision\": \"{{facturaFechaEmision}}\",\n  \"total\": {{facturaTotal}},\n  \"clienteId\": {{facturaClienteId}},\n  \"descripcion\": \"{{facturaDescripcion}}\"\n}"
         },
         "url": {
           "raw": "{{baseUrl}}/v1/facturas",
@@ -61,9 +61,9 @@
           }
         ],
         "url": {
-          "raw": "{{baseUrl}}/v1/facturas/1",
+          "raw": "{{baseUrl}}/v1/facturas/{{facturaId}}",
           "host": ["{{baseUrl}}"],
-          "path": ["v1", "facturas", "1"]
+          "path": ["v1", "facturas", "{{facturaId}}"]
         }
       }
     },
@@ -79,12 +79,12 @@
         ],
         "body": {
           "mode": "raw",
-          "raw": "{\n  \"numero\": \"FACT-2026-001-MOD\",\n  \"fechaEmision\": \"2026-04-08\",\n  \"total\": 1750.00,\n  \"clienteId\": 1,\n  \"descripcion\": \"Factura por servicios de consultoría - Actualizada\"\n}"
+          "raw": "{\n  \"numero\": \"{{facturaNumeroMod}}\",\n  \"fechaEmision\": \"{{facturaFechaEmision}}\",\n  \"total\": {{facturaTotalMod}},\n  \"clienteId\": {{facturaClienteId}},\n  \"descripcion\": \"{{facturaDescripcionMod}}\"\n}"
         },
         "url": {
-          "raw": "{{baseUrl}}/v1/facturas/1",
+          "raw": "{{baseUrl}}/v1/facturas/{{facturaId}}",
           "host": ["{{baseUrl}}"],
-          "path": ["v1", "facturas", "1"]
+          "path": ["v1", "facturas", "{{facturaId}}"]
         }
       }
     },
@@ -99,9 +99,9 @@
           }
         ],
         "url": {
-          "raw": "{{baseUrl}}/v1/facturas/cliente/1",
+          "raw": "{{baseUrl}}/v1/facturas/cliente/{{facturaClienteId}}",
           "host": ["{{baseUrl}}"],
-          "path": ["v1", "facturas", "cliente", "1"]
+          "path": ["v1", "facturas", "cliente", "{{facturaClienteId}}"]
         }
       }
     },
@@ -111,9 +111,9 @@
         "method": "DELETE",
         "header": [],
         "url": {
-          "raw": "{{baseUrl}}/v1/facturas/1",
+          "raw": "{{baseUrl}}/v1/facturas/{{facturaId}}",
           "host": ["{{baseUrl}}"],
-          "path": ["v1", "facturas", "1"]
+          "path": ["v1", "facturas", "{{facturaId}}"]
         }
       }
     },
@@ -129,7 +129,7 @@
         ],
         "body": {
           "mode": "raw",
-          "raw": "{\n  \"numero\": \"\",\n  \"fechaEmision\": \"2026-04-08\",\n  \"total\": 1500.50,\n  \"clienteId\": 1,\n  \"descripcion\": \"Factura sin número\"\n}"
+          "raw": "{\n  \"numero\": \"{{facturaNumeroVacio}}\",\n  \"fechaEmision\": \"{{facturaFechaEmision}}\",\n  \"total\": {{facturaTotal}},\n  \"clienteId\": {{facturaClienteId}},\n  \"descripcion\": \"{{facturaDescripcionNumeroVacio}}\"\n}"
         },
         "url": {
           "raw": "{{baseUrl}}/v1/facturas",
@@ -150,7 +150,7 @@
         ],
         "body": {
           "mode": "raw",
-          "raw": "{\n  \"numero\": \"FACT-2026-005\",\n  \"fechaEmision\": \"2026-04-08\",\n  \"total\": -100.00,\n  \"clienteId\": 1,\n  \"descripcion\": \"Factura con total negativo\"\n}"
+          "raw": "{\n  \"numero\": \"{{facturaNumeroTotalNegativo}}\",\n  \"fechaEmision\": \"{{facturaFechaEmision}}\",\n  \"total\": {{facturaTotalNegativo}},\n  \"clienteId\": {{facturaClienteId}},\n  \"descripcion\": \"{{facturaDescripcionTotalNegativo}}\"\n}"
         },
         "url": {
           "raw": "{{baseUrl}}/v1/facturas",
