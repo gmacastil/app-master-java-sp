@@ -10,12 +10,12 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 @Documented
-@Constraint(validatedBy = CelularValidator.class)
+@Constraint(validatedBy = CodigoFacturaValidator.class)
 @Target({ElementType.FIELD, ElementType.PARAMETER})
 @Retention(RetentionPolicy.RUNTIME)
-public @interface Celular {
+public @interface CodigoFactura {
 
-    String message() default "El número de celular debe empezar por 3 y tener 12 dígitos";
+    String message() default "El código de factura debe tener el formato FACT-YYYY-NNN (ej: FACT-2026-001)";
 
     Class<?>[] groups() default {};
 

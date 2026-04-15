@@ -1,0 +1,20 @@
+version: "2"
+
+tunnels:
+  ms-factura:
+    proto: http
+    addr: 192.168.1.35:8080
+    inspect: true
+
+
+log_level: info
+log_format: json
+
+# Región del servidor ngrok (us, eu, ap, au, sa, jp, in)
+region: us
+
+# Update check
+update_check: false
+
+# Metadata para identificar el túnel
+metadata: '{"service": "facturas-api", "environment": "development"}'

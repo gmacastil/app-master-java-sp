@@ -1,0 +1,142 @@
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m----------------------------< [0;36mcom.lite:gw[0;1m >-----------------------------[m
+[[1;34mINFO[m] [1mBuilding  0.0.1-SNAPSHOT[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m>>> [0;32mspring-boot-maven-plugin:3.5.13:run[m [1m(default-cli)[0;1m > [0;1mtest-compile[m @ [36mgw[0;1m >>>[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.3.1:resources[m [1m(default-resources)[m @ [36mgw[0;1m ---[m
+[[1;34mINFO[m] Copying 1 resource from src/main/resources to target/classes
+[[1;34mINFO[m] Copying 0 resource from src/main/resources to target/classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.14.1:compile[m [1m(default-compile)[m @ [36mgw[0;1m ---[m
+[[1;34mINFO[m] Nothing to compile - all classes are up to date.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.3.1:testResources[m [1m(default-testResources)[m @ [36mgw[0;1m ---[m
+[[1;34mINFO[m] skip non existing resourceDirectory /data/personal/trabajos/litethinking/cursos/curso spring (cap3y4)/repos/app-master-java-sp/gw/src/test/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.14.1:testCompile[m [1m(default-testCompile)[m @ [36mgw[0;1m ---[m
+[[1;34mINFO[m] Nothing to compile - all classes are up to date.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m<<< [0;32mspring-boot-maven-plugin:3.5.13:run[m [1m(default-cli)[0;1m < [0;1mtest-compile[m @ [36mgw[0;1m <<<[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mspring-boot-maven-plugin:3.5.13:run[m [1m(default-cli)[m @ [36mgw[0;1m ---[m
+[[1;34mINFO[m] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::               (v3.5.13)
+
+2026-04-14T19:56:27.242-05:00  INFO 207794 --- [gw] [           main] com.lite.gw.GwApplication                : Starting GwApplication using Java 21.0.10 with PID 207794 (/data/personal/trabajos/litethinking/cursos/curso spring (cap3y4)/repos/app-master-java-sp/gw/target/classes started by alecasti in /data/personal/trabajos/litethinking/cursos/curso spring (cap3y4)/repos/app-master-java-sp/gw)
+2026-04-14T19:56:27.243-05:00  INFO 207794 --- [gw] [           main] com.lite.gw.GwApplication                : No active profile set, falling back to 1 default profile: "default"
+2026-04-14T19:56:28.124-05:00  INFO 207794 --- [gw] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=5f73cd3c-6e6f-31f4-9957-7b2994d516f9
+2026-04-14T19:56:28.492-05:00  INFO 207794 --- [gw] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9090 (http)
+2026-04-14T19:56:28.512-05:00  INFO 207794 --- [gw] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-14T19:56:28.513-05:00  INFO 207794 --- [gw] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.53]
+2026-04-14T19:56:28.572-05:00  INFO 207794 --- [gw] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-04-14T19:56:28.574-05:00  INFO 207794 --- [gw] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1120 ms
+2026-04-14T19:56:28.889-05:00 DEBUG 207794 --- [gw] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : 2 mappings in 'requestMappingHandlerMapping'
+2026-04-14T19:56:28.983-05:00 DEBUG 207794 --- [gw] [           main] .s.c.g.s.m.c.RouterFunctionHolderFactory : Yaml Properties matched Operations name: path, args: {patterns=/v1/facturas/**}, params: [patterns of type [Ljava.lang.String;]
+2026-04-14T19:56:28.995-05:00 DEBUG 207794 --- [gw] [           main] .s.c.g.s.m.c.RouterFunctionHolderFactory : Yaml Properties matched Operations name: stripPrefix, args: {parts=0}, params: [parts of type int]
+2026-04-14T19:56:29.004-05:00 DEBUG 207794 --- [gw] [           main] .s.c.g.s.m.c.RouterFunctionHolderFactory : Yaml Properties matched Operations name: path, args: {patterns=/swagger-ui/**}, params: [patterns of type [Ljava.lang.String;]
+2026-04-14T19:56:29.005-05:00 DEBUG 207794 --- [gw] [           main] .s.c.g.s.m.c.RouterFunctionHolderFactory : Yaml Properties matched Operations name: stripPrefix, args: {parts=0}, params: [parts of type int]
+2026-04-14T19:56:29.006-05:00 DEBUG 207794 --- [gw] [           main] .s.c.g.s.m.c.RouterFunctionHolderFactory : Yaml Properties matched Operations name: path, args: {patterns=/v3/api-docs/**}, params: [patterns of type [Ljava.lang.String;]
+2026-04-14T19:56:29.006-05:00 DEBUG 207794 --- [gw] [           main] .s.c.g.s.m.c.RouterFunctionHolderFactory : Yaml Properties matched Operations name: stripPrefix, args: {parts=0}, params: [parts of type int]
+2026-04-14T19:56:29.010-05:00 DEBUG 207794 --- [gw] [           main] o.s.w.s.f.support.RouterFunctionMapping  : 1 RouterFunction(s) in 'routerFunctionMapping'
+2026-04-14T19:56:29.041-05:00 DEBUG 207794 --- [gw] [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2026-04-14T19:56:29.059-05:00 DEBUG 207794 --- [gw] [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2026-04-14T19:56:29.113-05:00 DEBUG 207794 --- [gw] [           main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2026-04-14T19:56:29.415-05:00  INFO 207794 --- [gw] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9090 (http) with context path '/'
+2026-04-14T19:56:29.437-05:00  INFO 207794 --- [gw] [           main] com.lite.gw.GwApplication                : Started GwApplication in 2.79 seconds (process running for 3.6)
+2026-04-14T19:56:29.442-05:00  WARN 207794 --- [gw] [           main] yServerWebMvcPropertiesMigrationListener : 
+The use of configuration keys that have been renamed was found in the environment:
+
+Property source 'Config resource 'class path resource [application.yaml]' via location 'optional:classpath:/'':
+	Key: spring.cloud.gateway.mvc.routes[0].id
+		Line: 12
+		Replacement: spring.cloud.gateway.server.webmvc.routes[0].id
+	Key: spring.cloud.gateway.mvc.routes[0].uri
+		Line: 13
+		Replacement: spring.cloud.gateway.server.webmvc.routes[0].uri
+	Key: spring.cloud.gateway.mvc.routes[0].predicates[0]
+		Line: 15
+		Replacement: spring.cloud.gateway.server.webmvc.routes[0].predicates[0]
+	Key: spring.cloud.gateway.mvc.routes[0].filters[0]
+		Line: 17
+		Replacement: spring.cloud.gateway.server.webmvc.routes[0].filters[0]
+	Key: spring.cloud.gateway.mvc.routes[1].id
+		Line: 20
+		Replacement: spring.cloud.gateway.server.webmvc.routes[1].id
+	Key: spring.cloud.gateway.mvc.routes[1].uri
+		Line: 21
+		Replacement: spring.cloud.gateway.server.webmvc.routes[1].uri
+	Key: spring.cloud.gateway.mvc.routes[1].predicates[0]
+		Line: 23
+		Replacement: spring.cloud.gateway.server.webmvc.routes[1].predicates[0]
+	Key: spring.cloud.gateway.mvc.routes[1].filters[0]
+		Line: 25
+		Replacement: spring.cloud.gateway.server.webmvc.routes[1].filters[0]
+	Key: spring.cloud.gateway.mvc.routes[2].id
+		Line: 28
+		Replacement: spring.cloud.gateway.server.webmvc.routes[2].id
+	Key: spring.cloud.gateway.mvc.routes[2].uri
+		Line: 29
+		Replacement: spring.cloud.gateway.server.webmvc.routes[2].uri
+	Key: spring.cloud.gateway.mvc.routes[2].predicates[0]
+		Line: 31
+		Replacement: spring.cloud.gateway.server.webmvc.routes[2].predicates[0]
+	Key: spring.cloud.gateway.mvc.routes[2].filters[0]
+		Line: 33
+		Replacement: spring.cloud.gateway.server.webmvc.routes[2].filters[0]
+
+
+Each configuration key has been temporarily mapped to its replacement for your convenience. To silence this warning, please update your configuration to use the new keys.
+
+2026-04-14T20:05:45.432-05:00  INFO 207794 --- [gw] [nio-9090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-14T20:05:45.433-05:00  INFO 207794 --- [gw] [nio-9090-exec-1] o2026-04-14T20:29:43.114-05:00  INFO 204792 --- [gw] [ionShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-04-14T20:29:43.122-05:00  INFO 204792 --- [gw] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;31mBUILD FAILURE[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+anslator@54c9d728
+2026-04-14T20:05:45.435-05:00 DEBUG 207794 --- [gw] [nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@6462277d
+2026-04-14T20:05:45.435-05:00 DEBUG 207794 --- [gw] [nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2026-04-14T20:05:45.435-05:00  INFO 207794 --- [gw] [nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-04-14T20:05:45.445-05:00 DEBUG 207794 --- [gw] [nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/v1/facturas", parameters={}
+2026-04-14T20:05:45.464-05:00 DEBUG 207794 --- [gw] [nio-9090-exec-1] o.s.w.s.f.support.RouterFunctionMapping  : Mapped to org.springframework.web.servlet.function.HandlerFilterFunction$$Lambda/0x000071405c5744b8@21793f5d
+2026-04-14T20:05:45.600-05:00 DEBUG 207794 --- [gw] [nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-04-14T20:05:45.614-05:00 DEBUG 207794 --- [gw] [nio-9090-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/v1/facturas", parameters={}
+2026-04-14T20:05:45.614-05:00 DEBUG 207794 --- [gw] [nio-9090-exec-2] o.s.w.s.f.support.RouterFunctionMapping  : Mapped to org.springframework.web.servlet.function.HandlerFilterFunction$$Lambda/0x000071405c5744b8@6bb8ec0c
+2026-04-14T20:05:45.640-05:00 DEBUG 207794 --- [gw] [nio-9090-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-04-14T20:13:52.705-05:00 DEBUG 207794 --- [gw] [nio-9090-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/v3/api-docs", parameters={}
+2026-04-14T20:13:52.707-05:00 DEBUG 207794 --- [gw] [nio-9090-exec-3] o.s.w.s.f.support.RouterFunctionMapping  : Mapped to org.springframework.web.servlet.function.HandlerFilterFunction$$Lambda/0x000071405c5744b8@1c088508
+2026-04-14T20:13:52.721-05:00 DEBUG 207794 --- [gw] [nio-9090-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-04-14T20:13:52.735-05:00 DEBUG 207794 --- [gw] [nio-9090-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/v3/api-docs", parameters={}
+2026-04-14T20:13:52.737-05:00 DEBUG 207794 --- [gw] [nio-9090-exec-4] o.s.w.s.f.support.RouterFunctionMapping  : Mapped to org.springframework.web.servlet.function.HandlerFilterFunction$$Lambda/0x000071405c5744b8@1abe2e35
+2026-04-14T20:13:52.743-05:00 DEBUG 207794 --- [gw] [nio-9090-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-04-14T20:14:29.554-05:00 DEBUG 207794 --- [gw] [nio-9090-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/v1/facturas", parameters={}
+2026-04-14T20:14:29.554-05:00 DEBUG 207794 --- [gw] [nio-9090-exec-5] o.s.w.s.f.support.RouterFunctionMapping  : Mapped to org.springframework.web.servlet.function.HandlerFilterFunction$$Lambda/0x000071405c5744b8@fdfcb24
+2026-04-14T20:14:29.567-05:00 DEBUG 207794 --- [gw] [nio-9090-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-04-14T20:14:46.889-05:00 DEBUG 207794 --- [gw] [nio-9090-exec-6] o.s.web.servlet.DispatcherServlet        : PUT "/v1/facturas/1", parameters={}
+2026-04-14T20:14:46.890-05:00 DEBUG 207794 --- [gw] [nio-9090-exec-6] o.s.w.s.f.support.RouterFunctionMapping  : Mapped to org.springframework.web.servlet.function.HandlerFilterFunction$$Lambda/0x000071405c5744b8@36b123c9
+2026-04-14T20:14:47.000-05:00 DEBUG 207794 --- [gw] [nio-9090-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 500 INTERNAL_SERVER_ERROR
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;31mBUILD FAILURE[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  19:39 min
+[[1;34mINFO[m] Finished at: 2026-04-14T20:16:02-05:00
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;31mERROR[m] Failed to execute goal [32morg.springframework.boot:spring-boot-maven-plugin:3.5.13:run[m [1m(default-cli)[m on project [36mgw[m: [1;31mProcess terminated with exit code: 137[m -> [1m[Help 1][m
+[[1;31mERROR[m] 
+[[1;31mERROR[m] To see the full stack trace of the errors, re-run Maven with the [1m-e[m switch.
+[[1;31mERROR[m] Re-run Maven using the [1m-X[m switch to enable full debug logging.
+[[1;31mERROR[m] 
+[[1;31mERROR[m] For more information about the errors and possible solutions, please read the following articles:
+[[1;31mERROR[m] [1m[Help 1][m http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException

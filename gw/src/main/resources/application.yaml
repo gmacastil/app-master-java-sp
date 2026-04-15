@@ -1,0 +1,40 @@
+server:
+  port: 9090
+
+spring:
+  application:
+    name: gw
+  cloud:
+    gateway:
+      server:
+        webmvc:
+          routes:
+          # Ruta para el microservicio de facturas - API REST v1
+          - id: ms-factura-v1
+            uri: http://localhost:8080
+            predicates:
+              - Path=/v1/facturas/**
+            filters:
+              - StripPrefix=0
+
+          - id: ms-cliente-v1
+            uri: http://localhost:8081
+            predicates:
+              - Path=/v1/clientes/**
+            filters:
+              - StripPrefix=0
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+  endpoint:
+    health:
+      show-details: always
+
+logging:
+  level:
+    org.springframework.cloud.gateway: DEBUG
+    org.springframework.web: DEBUG
+    org.springframework.security: DEBUG

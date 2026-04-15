@@ -1,4 +1,4 @@
-package com.lite.ms_factura.application.validators;
+package com.lite.ms_cliente.application.validators;
 
 import jakarta.validation.ConstraintValidator;
 import jakarta.validation.ConstraintValidatorContext;

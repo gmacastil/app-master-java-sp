@@ -1,12 +1,13 @@
-package com.lite.ms_cliente;
+package com.lite.gw;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class MsClienteApplication {
+public class GwApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(MsClienteApplication.class, args);
+		SpringApplication.run(GwApplication.class, args);
 	}
+
 }

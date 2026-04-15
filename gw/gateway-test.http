@@ -1,0 +1,81 @@
+### ============================================
+### VARIABLES DE CONFIGURACIÓN
+### ============================================
+@gatewayUrl = http://localhost:9090
+@microserviceUrl = http://localhost:8080
+
+### Credenciales de autenticación básica
+@adminUser = admin
+@adminPassword = admin123
+@normalUser = user
+@normalPassword = user123
+
+
+
+
+### ============================================
+### PRUEBAS CON AUTENTICACIÓN BÁSICA
+### ============================================
+
+### 1. GET - Obtener todas las facturas (CON autenticación - Admin)
+GET {{gatewayUrl}}/v1/facturas
+Accept: application/json
+Authorization: Basic {{adminUser}}:{{adminPassword}}
+
+### 1.1. GET - Obtener todas las facturas (CON autenticación - User)
+GET {{gatewayUrl}}/v1/facturas
+Accept: application/json
+Authorization: Basic {{normalUser}}:{{normalPassword}}
+
+### 1.2. GET - Obtener todas las facturas (SIN autenticación - debe fallar con 401)
+GET {{gatewayUrl}}/v1/facturas
+Accept: application/json
+
+### 2. GET - Obtener factura por ID (con autenticación)
+GET {{gatewayUrl}}/v1/facturas/2
+Accept: application/json
+Authorization: Basic {{adminUser}}:{{adminPassword}}
+
+### 3. POST - Crear nueva factura (con autenticación)
+POST {{gatewayUrl}}/v1/facturas
+Content-Type: application/json
+Authorization: Basic {{adminUser}}:{{adminPassword}}
+
+{
+  "numero": "FACT-TEST-001",
+  "fechaEmision": "2026-04-14",
+  "total": 150.50,
+  "clienteId": 1,
+  "descripcion": "Factura de prueba desde Gateway con Auth"
+}
+
+### 4. PUT - Actualizar factura (con autenticación)
+PUT {{gatewayUrl}}/v1/facturas/2
+Content-Type: application/json
+Authorization: Basic {{adminUser}}:{{adminPassword}}
+
+{
+  "id": 2,
+  "numero": "FACT-2026-002-UPD",
+  "fechaEmision": "2026-04-07",
+  "total": 2500.00,
+  "clienteId": 2,
+  "descripcion": "Factura actualizada desde Gateway con Auth"
+}
+
+### 5. DELETE - Eliminar factura (con autenticación)
+DELETE {{gatewayUrl}}/v1/facturas/10
+Authorization: Basic {{adminUser}}:{{adminPassword}}
+
+### ============================================
+### SWAGGER Y DOCUMENTACIÓN (a través del Gateway)
+### ============================================
+
+### 6. GET - OpenAPI Docs (con autenticación)
+GET {{gatewayUrl}}/v3/api-docs
+Accept: application/json
+Authorization: Basic {{adminUser}}:{{adminPassword}}
+
+### 7. GET - Swagger UI (a través del Gateway)
+# Abrir en navegador: http://localhost:8090/swagger-ui/index.html
+
