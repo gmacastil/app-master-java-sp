@@ -126,7 +126,7 @@ Accept: {{contentType}}
 ### ============================================
 ### 13. Obtener Facturas por Cliente ID (Cliente sin facturas)
 ### ============================================
-GET {{baseUrl}}/v1/facturas/cliente/999
+GET {{baseUrl}}/v1/facturas/cliente/1
 Accept: {{contentType}}
 
 ### ============================================

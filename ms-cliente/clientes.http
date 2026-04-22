@@ -1,0 +1,120 @@
+### Variables
+@baseUrl = http://localhost:8081
+@contentType = application/json
+
+### 1. Crear un nuevo cliente
+POST {{baseUrl}}/v1/clientes
+Content-Type: {{contentType}}
+
+{
+  "nombre": "Juan",
+  "idCli": "2",
+  "apellido": "Pérez",
+  "email": "juan.perez@example.com",
+  "celular": "312345678901",
+  "direccion": "Calle 123 #45-67, Bogotá"
+}
+
+### 2. Obtener todos los clientes
+GET {{baseUrl}}/v1/clientes
+Accept: {{contentType}}
+
+### 3. Obtener cliente por ID
+# Reemplaza {id} con un ID válido
+GET {{baseUrl}}/v1/clientes/66234abc123def456789
+Accept: {{contentType}}
+
+### 4. Obtener cliente por email
+GET {{baseUrl}}/v1/clientes/email?email=juan.perez@example.com
+Accept: {{contentType}}
+
+### 5. Obtener facturas de un cliente
+# Reemplaza {id} con un ID válido (debe ser numérico para el servicio de facturas)
+GET {{baseUrl}}/v1/clientes/2/facturas
+Accept: {{contentType}}
+
+### 6. Actualizar un cliente existente
+# Reemplaza {id} con un ID válido
+PUT {{baseUrl}}/v1/clientes/66234abc123def456789
+Content-Type: {{contentType}}
+
+{
+  "nombre": "Juan Carlos",
+  "apellido": "Pérez García",
+  "email": "juan.perez@example.com",
+  "celular": "312345678901",
+  "direccion": "Carrera 7 #45-10, Bogotá"
+}
+
+### 7. Eliminar un cliente
+# Reemplaza {id} con un ID válido
+DELETE {{baseUrl}}/v1/clientes/66234abc123def456789
+
+### ========================================
+### Ejemplos adicionales
+### ========================================
+
+### Crear cliente sin dirección (campo opcional)
+POST {{baseUrl}}/v1/clientes
+Content-Type: {{contentType}}
+
+{
+  "nombre": "María",
+  "apellido": "González",
+  "email": "maria.gonzalez@example.com",
+  "celular": "319876543210"
+}
+
+### Crear cliente con fecha de registro
+POST {{baseUrl}}/v1/clientes
+Content-Type: {{contentType}}
+
+{
+  "nombre": "Pedro",
+  "apellido": "Rodríguez",
+  "email": "pedro.rodriguez@example.com",
+  "celular": "315555555555",
+  "direccion": "Av. El Dorado #100-20",
+  "fechaRegistro": "2026-04-15"
+}
+
+### ========================================
+### Casos de error (validaciones)
+### ========================================
+
+### Error: Email inválido
+POST {{baseUrl}}/v1/clientes
+Content-Type: {{contentType}}
+
+{
+  "nombre": "Test",
+  "apellido": "Usuario",
+  "email": "correo-invalido",
+  "celular": "312345678901"
+}
+
+### Error: Nombre vacío
+POST {{baseUrl}}/v1/clientes
+Content-Type: {{contentType}}
+
+{
+  "nombre": "",
+  "apellido": "Usuario",
+  "email": "test@example.com",
+  "celular": "312345678901"
+}
+
+### Error: Celular inválido (no empieza con 3 o no tiene 12 dígitos)
+POST {{baseUrl}}/v1/clientes
+Content-Type: {{contentType}}
+
+{
+  "nombre": "Test",
+  "apellido": "Usuario",
+  "email": "test@example.com",
+  "celular": "412345678901"
+}
+
+### Error: Cliente no encontrado
+GET {{baseUrl}}/v1/clientes/000000000000000000000000
+Accept: {{contentType}}

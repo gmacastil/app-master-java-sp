@@ -8,7 +8,9 @@ import jakarta.validation.constraints.NotNull;
 import java.time.LocalDate;
 
 public record ClienteDTO(
-    Long id,
+    String id,
+    @NotEmpty(message = "El idCli no puede estar vacío")
+    String idCli,
     @NotEmpty(message = "El nombre no puede estar vacío")
     String nombre,
     @NotEmpty(message = "El apellido no puede estar vacío")

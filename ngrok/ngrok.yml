@@ -3,7 +3,12 @@ version: "2"
 tunnels:
   ms-factura:
     proto: http
-    addr: 192.168.1.35:8080
+    addr: localhost:8080
+    inspect: true
+
+  ms-cliente:
+    proto: http
+    addr: localhost:8081
     inspect: true
 
 

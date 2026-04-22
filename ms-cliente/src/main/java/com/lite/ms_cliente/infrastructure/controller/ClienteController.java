@@ -4,6 +4,7 @@ import com.lite.ms_cliente.application.exception.ResourceNotFoundException;
 import com.lite.ms_cliente.application.mapper.ClienteMapper;
 import com.lite.ms_cliente.application.service.ClienteUseCase;
 import com.lite.ms_cliente.domain.dto.ClienteDTO;
+import com.lite.ms_cliente.domain.dto.FacturaDTO;
 import com.lite.ms_cliente.domain.model.Cliente;
 
 import jakarta.validation.Valid;
@@ -30,7 +31,7 @@ import org.slf4j.LoggerFactory;
 @RequestMapping("/v1/clientes")
 @RequiredArgsConstructor
 public class ClienteController {
-    
+
     private final ClienteUseCase clienteUseCase;
     private final ClienteMapper clienteMapper;
 
@@ -51,30 +52,30 @@ public class ClienteController {
         return ResponseEntity.ok(clienteMapper.toDtoList(clientes));
     }
    
-    @GetMapping("/{id}")
-    public ResponseEntity<ClienteDTO> getClienteById(@PathVariable Long id) {
-        Cliente cliente = clienteUseCase.getClienteById(id)
-                .orElseThrow(() -> new ResourceNotFoundException("Cliente", "id", id));
+    @GetMapping("/{idCli}")
+    public ResponseEntity<ClienteDTO> getClienteByIdCli(@PathVariable String idCli) {
+        Cliente cliente = clienteUseCase.getClienteByIdCli(idCli)
+                .orElseThrow(() -> new ResourceNotFoundException("Cliente", "idCli", idCli));
         log.info(null, value("cliente", cliente));
         return ResponseEntity.ok(clienteMapper.toDto(cliente));
     }
     
-    @PutMapping("/{id}")
-    public ResponseEntity<ClienteDTO> updateCliente(@PathVariable Long id, @Valid @RequestBody ClienteDTO clienteDTO) {
-        clienteUseCase.getClienteById(id)
-                .orElseThrow(() -> new ResourceNotFoundException("Cliente", "id", id));
-        
+    @PutMapping("/{idCli}")
+    public ResponseEntity<ClienteDTO> updateCliente(@PathVariable String idCli, @Valid @RequestBody ClienteDTO clienteDTO) {
+        clienteUseCase.getClienteByIdCli(idCli)
+                .orElseThrow(() -> new ResourceNotFoundException("Cliente", "idCli", idCli));
+
         Cliente clienteDetails = clienteMapper.toModel(clienteDTO);
-        Cliente updatedCliente = clienteUseCase.updateCliente(id, clienteDetails);
+        Cliente updatedCliente = clienteUseCase.updateCliente(idCli, clienteDetails);
         return ResponseEntity.ok(clienteMapper.toDto(updatedCliente));
     }
     
-    @DeleteMapping("/{id}")
-    public ResponseEntity<?> deleteCliente(@PathVariable Long id) {
-        clienteUseCase.getClienteById(id)
-                .orElseThrow(() -> new ResourceNotFoundException("Cliente", "id", id));
-        
-        clienteUseCase.deleteCliente(id);
+    @DeleteMapping("/{idCli}")
+    public ResponseEntity<?> deleteCliente(@PathVariable String idCli) {
+        clienteUseCase.getClienteByIdCli(idCli)
+                .orElseThrow(() -> new ResourceNotFoundException("Cliente", "idCli", idCli));
+
+        clienteUseCase.deleteCliente(idCli);
         return ResponseEntity.ok().build();
     }
     
@@ -83,5 +84,18 @@ public class ClienteController {
         Cliente cliente = clienteUseCase.getClienteByEmail(email)
                 .orElseThrow(() -> new ResourceNotFoundException("Cliente", "email", email));
         return ResponseEntity.ok(clienteMapper.toDto(cliente));
+    }
+
+    @GetMapping("/{idCli}/facturas")
+    public ResponseEntity<List<FacturaDTO>> getFacturasByClienteId(@PathVariable String idCli) {
+        // Verificar que el cliente existe
+        clienteUseCase.getClienteByIdCli(idCli)
+                .orElseThrow(() -> new ResourceNotFoundException("Cliente", "idCli", idCli));
+
+        // Delegar la consulta de facturas al use case (usa idCli para consultar el microservicio de facturas)
+        List<FacturaDTO> facturas = clienteUseCase.getFacturasByClienteId(idCli);
+        log.info("Consulta de facturas para cliente idCli: {}, facturas encontradas: {}",
+                idCli, facturas.size());
+        return ResponseEntity.ok(facturas);
     }
 }

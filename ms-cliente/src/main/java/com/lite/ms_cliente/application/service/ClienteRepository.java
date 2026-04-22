@@ -9,11 +9,13 @@ public interface ClienteRepository {
     
     Cliente save(Cliente cliente);
     
-    Optional<Cliente> findById(Long id);
+    Optional<Cliente> findById(String id);
     
     List<Cliente> findAll();
     
-    void deleteById(Long id);
+    void deleteById(String id);
     
     Optional<Cliente> findByEmail(String email);
+
+    Optional<Cliente> findByIdCli(String idCli);
 }

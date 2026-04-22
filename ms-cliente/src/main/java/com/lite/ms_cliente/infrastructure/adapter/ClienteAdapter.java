@@ -29,7 +29,7 @@ public class ClienteAdapter implements ClienteRepository {
     }
     
     @Override
-    public Optional<Cliente> findById(Long id) {
+    public Optional<Cliente> findById(String id) {
         return clienteJpaRepository.findById(id)
                 .map(clienteMapper::toModel);
     }
@@ -42,13 +42,19 @@ public class ClienteAdapter implements ClienteRepository {
     }
     
     @Override
-    public void deleteById(Long id) {
+    public void deleteById(String id) {
         clienteJpaRepository.deleteById(id);
     }
     
     @Override
     public Optional<Cliente> findByEmail(String email) {
         return clienteJpaRepository.findByEmail(email)
+                .map(clienteMapper::toModel);
+    }
+
+    @Override
+    public Optional<Cliente> findByIdCli(String idCli) {
+        return clienteJpaRepository.findByIdCli(idCli)
                 .map(clienteMapper::toModel);
     }
 }

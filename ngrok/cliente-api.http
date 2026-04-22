@@ -1,0 +1,135 @@
+### Pruebas para ms-cliente a través de ngrok
+### Reemplaza la URL base con la URL pública de ngrok para ms-cliente
+
+@baseUrl = https://unsheathe-lying-cornbread.ngrok-free.dev
+@localUrl = http://localhost:8081
+
+### Health Check - Local
+GET {{localUrl}}/
+Accept: application/json
+
+###
+
+### Health Check - ngrok
+GET {{baseUrl}}/
+Accept: application/json
+
+###
+
+### 1. Crear un nuevo cliente - Local
+POST {{localUrl}}/v1/clientes
+Content-Type: application/json
+
+{
+  "nombre": "Juan",
+  "apellido": "Pérez",
+  "email": "juan.perez@example.com",
+  "telefono": "987654321"
+}
+
+###
+
+### 2. Crear un nuevo cliente - ngrok
+POST {{baseUrl}}/v1/clientes
+Content-Type: application/json
+
+{
+  "nombre": "María",
+  "apellido": "García",
+  "email": "maria.garcia@example.com",
+  "telefono": "912345678"
+}
+
+###
+
+### 3. Obtener todos los clientes - Local
+GET {{localUrl}}/v1/clientes
+Accept: application/json
+
+###
+
+### 4. Obtener todos los clientes - ngrok
+GET {{baseUrl}}/v1/clientes
+Accept: application/json
+
+###
+
+### 5. Obtener cliente por ID - Local
+# Reemplaza {id} con un ID válido
+GET {{localUrl}}/v1/clientes/{id}
+Accept: application/json
+
+###
+
+### 6. Obtener cliente por ID - ngrok
+# Reemplaza {id} con un ID válido
+GET {{baseUrl}}/v1/clientes/{id}
+Accept: application/json
+
+###
+
+### 7. Obtener cliente por email - Local
+GET {{localUrl}}/v1/clientes/email?email=juan.perez@example.com
+Accept: application/json
+
+###
+
+### 8. Obtener cliente por email - ngrok
+GET {{baseUrl}}/v1/clientes/email?email=maria.garcia@example.com
+Accept: application/json
+
+###
+
+### 9. Actualizar cliente - Local
+# Reemplaza {id} con un ID válido
+PUT {{localUrl}}/v1/clientes/{id}
+Content-Type: application/json
+
+{
+  "nombre": "Juan Actualizado",
+  "apellido": "Pérez Martínez",
+  "email": "juan.perez.actualizado@example.com",
+  "telefono": "987654999"
+}
+
+###
+
+### 10. Actualizar cliente - ngrok
+# Reemplaza {id} con un ID válido
+PUT {{baseUrl}}/v1/clientes/{id}
+Content-Type: application/json
+
+{
+  "nombre": "María Actualizada",
+  "apellido": "García López",
+  "email": "maria.garcia.actualizada@example.com",
+  "telefono": "912345999"
+}
+
+###
+
+### 11. Obtener facturas de un cliente - Local
+# Reemplaza {id} con un ID válido de cliente
+GET {{localUrl}}/v1/clientes/{id}/facturas
+Accept: application/json
+
+###
+
+### 12. Obtener facturas de un cliente - ngrok
+# Reemplaza {id} con un ID válido de cliente
+GET {{baseUrl}}/v1/clientes/{id}/facturas
+Accept: application/json
+
+###
+
+### 13. Eliminar cliente - Local
+# Reemplaza {id} con un ID válido
+DELETE {{localUrl}}/v1/clientes/{id}
+
+###
+
+### 14. Eliminar cliente - ngrok
+# Reemplaza {id} con un ID válido
+DELETE {{baseUrl}}/v1/clientes/{id}
+
+###

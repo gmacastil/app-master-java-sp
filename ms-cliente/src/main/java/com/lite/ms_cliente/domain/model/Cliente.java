@@ -3,7 +3,8 @@ package com.lite.ms_cliente.domain.model;
 import java.time.LocalDate;
 
 public record Cliente(
-    Long id,
+    String id,
+    String idCli,
     String nombre,
     String apellido,
     String email,

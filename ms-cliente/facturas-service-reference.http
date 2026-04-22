@@ -1,0 +1,51 @@
+### Variables - Servicio de Facturas
+@facturasBaseUrl = http://localhost:8080
+@contentType = application/json
+
+### ========================================
+### Este archivo es solo de REFERENCIA
+### Endpoints del servicio de facturas externo
+### ========================================
+
+### 1. Crear una nueva factura
+POST {{facturasBaseUrl}}/v1/facturas
+Content-Type: {{contentType}}
+
+{
+  "numero": "FAC-001",
+  "fechaEmision": "2026-04-15",
+  "total": 1500.50,
+  "clienteId": 1,
+  "descripcion": "Servicios de consultoría"
+}
+
+### 2. Obtener todas las facturas
+GET {{facturasBaseUrl}}/v1/facturas
+Accept: {{contentType}}
+
+### 3. Obtener factura por ID
+GET {{facturasBaseUrl}}/v1/facturas/1
+Accept: {{contentType}}
+
+### 4. Obtener facturas por clienteId
+# Este es el endpoint que utiliza el ms-cliente
+GET {{facturasBaseUrl}}/v1/facturas/cliente/1
+Accept: {{contentType}}
+
+### 5. Actualizar una factura
+PUT {{facturasBaseUrl}}/v1/facturas/1
+Content-Type: {{contentType}}
+
+{
+  "numero": "FAC-001-REV",
+  "fechaEmision": "2026-04-15",
+  "total": 1800.75,
+  "clienteId": 1,
+  "descripcion": "Servicios de consultoría - Actualizado"
+}
+
+### 6. Eliminar una factura
+DELETE {{facturasBaseUrl}}/v1/facturas/1
+
+### 7. Health Check
+GET {{facturasBaseUrl}}/
