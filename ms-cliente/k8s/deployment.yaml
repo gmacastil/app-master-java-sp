@@ -1,0 +1,45 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mscliente
+  labels:
+    app: mscliente
+  namespace: app-micros
+spec:
+  replicas: 0
+  selector:
+    matchLabels:
+      app: mscliente
+  template:
+    metadata:
+      labels:
+        app: mscliente
+    spec:
+      containers:
+        - name: mscliente
+          image: mauron/ms-cliente:5
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8080
+          env:
+            - name: JAVA_OPTS
+              value: "-Xmx256m"
+            - name: MONGO_HOST
+              value: "192.168.1.35"
+            - name: MONGO_PORT
+              value: "27017"
+            - name: MONGO_DATABASE
+              value: "cliente_db"
+            - name: MONGO_USERNAME
+              value: "admin"
+            - name: MONGO_PASSWORD
+              value: "password123"
+            - name: FACTURAS_SERVICE_URL
+              value: "http://msfacturas:8080"
+            - name: LOGSTASH_HOST
+              value: "logstash:9201"
+          securityContext:
+            runAsNonRoot: true
+            runAsUser: 1000
+            runAsGroup: 1000
+            allowPrivilegeEscalation: false

@@ -68,7 +68,7 @@ Content-Type: application/json
 ### ========================================
 ### DELETE FACTURA
 ### ========================================
-DELETE {{baseUrl}}/{{apiVersion}}/facturas/1
+DELETE {{baseUrl}}/{{apiVersion}}/facturas/77
 Accept: application/json
 
 ### ========================================

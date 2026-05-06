@@ -1,0 +1,13 @@
+# K6 Results
+results/
+*.json
+
+# K6 Reports
+reports/
+*.html
+
+# Node modules (si se usa para reportes)
+node_modules/
+
+# Logs
+*.log

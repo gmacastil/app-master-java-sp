@@ -1,5 +1,5 @@
 ### Variables
-@baseUrl = http://localhost:8081
+@baseUrl = http://localhost:7090
 @contentType = application/json
 
 ### 1. Crear un nuevo cliente
