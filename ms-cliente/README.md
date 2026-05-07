@@ -4,11 +4,11 @@
 gradle build
 
 # generar la imagen
-docker build . -t ms-cliente:5
+docker build . -t ms-cliente:6
 
 # tagear con el nombre del registry
 // ejemplo con dockerhub
-docker tag ms-cliente:5 mauron/ms-cliente:5
+docker tag ms-cliente:6 mauron/ms-cliente:6
 
 // ejemplo con aws
 docker tag ms-cliente:2 451241043517.dkr.ecr.us-east-2.amazonaws.com/ms-cliente:2
@@ -18,7 +18,7 @@ docker login
 
 # subir la imagen al registry
 // ejemplo con dockerhub
-docker push mauron/ms-cliente:5
+docker push mauron/ms-cliente:6
 
 // ejemplo con aws
 docker push 451241043517.dkr.ecr.us-east-2.amazonaws.com/ms-cliente:2
